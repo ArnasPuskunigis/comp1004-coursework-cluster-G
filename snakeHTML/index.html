@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main" class="wrapper">
+      <div class="game-details">
+        <span class="score">Score: 15</span>
+        <span class="high-score">High Score: 30</span>
+      </div>
+
+      <div class="play-board"></div>
+
+      <button
+        style="position: absolute; left: 290px; top: 100px"
+        onclick="hideOrShowPlay()"
+      >
+        Play
+      </button>
+      <button
+        style="position: absolute; left: 290px; top: 150px"
+        onclick="hideOrShowOptions()"
+      >
+        Options
+      </button>
+      <button
+        style="position: absolute; left: 290px; top: 200px"
+        onclick="hideOrShowHowToPlay()"
+      >
+        How to play
+      </button>
+      <button
+        style="position: absolute; left: 290px; top: 250px"
+        onclick="exitButton()"
+      >
+        Exit
+      </button>
+      <div
+        id="playMenu"
+        class="wrapped"
+        hidden="false"
+        style="position: relative; left: 50px; top: 30px"
+        ;
+      >
+        <div class="game-details">
+          <p>CHOOSE DIFFICULTY</p>
+        </div>
+        <button
+          style="position: absolute; left: 290px; top: 150px"
+          onclick="easyButton()"
+        >
+          Easy
+        </button>
+        <button
+          style="position: absolute; left: 290px; top: 200px"
+          onclick="mediumButton()"
+        >
+          Medium
+        </button>
+        <button
+          style="position: absolute; left: 290px; top: 250px"
+          onclick="hardButton()"
+        >
+          Hard
+        </button>
+        <button
+          style="position: absolute; left: 546px; top: 0px"
+          onclick="hideOrShowPlay()"
+        >
+          X
+        </button>
+      </div>
+
+      <div
+        id="optionsMenu"
+        class="wrapped"
+        hidden="false"
+        style="position: relative; left: 50px; top: 30px"
+        ;
+      >
+        <div class="game-details">
+          <p>OPTIONS</p>
+        </div>
+        <button
+          style="position: absolute; left: 546px; top: 0px"
+          onclick="hideOrShowOptions()"
+        >
+          X
+        </button>
+      </div>
+
+      <div
+        id="howToPlayMenu"
+        class="wrapped"
+        hidden="false"
+        style="position: relative; left: 50px; top: 30px"
+        ;
+      >
+        <div class="game-details">
+          <p>HOW TO PLAY</p>
+        </div>
+        <button
+          style="position: absolute; left: 546px; top: 0px"
+          onclick="hideOrShowHowToPlay()"
+        >
+          X
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function hideOrShowPlay() {
+      var playMenu = document.getElementById("playMenu");
+      if (playMenu.style.display === "none") {
+        playMenu.style.display = "block";
+      } else {
+        playMenu.style.display = "none";
+      }
+    }
+  </script>
+
+  <script>
+    function hideOrShowOptions() {
+      var optionsMenu = document.getElementById("optionsMenu");
+
+      if (optionsMenu.style.display === "none") {
+        optionsMenu.style.display = "block";
+      } else {
+        optionsMenu.style.display = "none";
+      }
+    }
+  </script>
+
+  <script>
+    function hideOrShowHowToPlay() {
+      var howToPlayMenu = document.getElementById("howToPlayMenu");
+
+      if (howToPlayMenu.style.display === "none") {
+        howToPlayMenu.style.display = "block";
+      } else {
+        howToPlayMenu.style.display = "none";
+      }
+    }
+  </script>
+
+  <script>
+    function exitButton() {
+      window.close();
+    }
+  </script>
+
+  <script>
+    function easyButton() {}
+  </script>
+
+  <script>
+    function mediumButton() {}
+  </script>
+
+  <script>
+    function hardButton() {}
+  </script>
+</html>
