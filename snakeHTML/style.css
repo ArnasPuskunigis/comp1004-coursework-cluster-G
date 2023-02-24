@@ -1,11 +1,69 @@
-.wrapper {
+.main {
+    position: fixed;
     width: 700px;
     height: 700px;
     background: rgb(70, 70, 144);
 }
 
-.wrapped {
-    width: 575px;
-    height: 575px;
-    background: rgb(131, 131, 238);
+.difficultyMenu {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 600px;
+    height: 600px;
+    background: rgb(1, 1, 22);
 }
+
+.optionsMenu {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 600px;
+    height: 600px;
+    background: rgb(1, 1, 22);
+}
+
+.howToPlayMenu {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: 600px;
+    height: 600px;
+    background: rgb(1, 1, 22);
+}
+
+.mainButtons{
+    padding: 5%;
+    text-decoration: none;
+    list-style: none;
+    display: block;
+    text-align: center;
+    box-sizing: content-box;
+ }
+
+ .mainButtons li{
+    padding: 2%;
+ }
+
+.mainButtonItems{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+ }
+
+ .exitButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    font-size: 16px;
+ }

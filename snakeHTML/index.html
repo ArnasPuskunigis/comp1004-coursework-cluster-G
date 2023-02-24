@@ -8,143 +8,90 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="main" class="wrapper">
-      <div class="game-details">
-        <span class="score">Score: 15</span>
-        <span class="high-score">High Score: 30</span>
+    <div class="main">
+      <div id="mainScreen" class="mainButtons">
+        <li>
+          <button class="mainButtonItems" onclick="hideOrShowPlay()">
+            Play
+          </button>
+        </li>
+        <li>
+          <button class="mainButtonItems" onclick="hideOrShowOptions()">
+            Options
+          </button>
+        </li>
+        <li>
+          <button class="mainButtonItems" onclick="hideOrShowHowToPlay()">
+            How to play
+          </button>
+        </li>
+        <li>
+          <button class="mainButtonItems" onclick="exitButton()">Exit</button>
+        </li>
       </div>
 
-      <div class="play-board"></div>
-
-      <button
-        style="position: absolute; left: 290px; top: 100px"
-        onclick="hideOrShowPlay()"
-      >
-        Play
-      </button>
-      <button
-        style="position: absolute; left: 290px; top: 150px"
-        onclick="hideOrShowOptions()"
-      >
-        Options
-      </button>
-      <button
-        style="position: absolute; left: 290px; top: 200px"
-        onclick="hideOrShowHowToPlay()"
-      >
-        How to play
-      </button>
-      <button
-        style="position: absolute; left: 290px; top: 250px"
-        onclick="exitButton()"
-      >
-        Exit
-      </button>
-      <div
-        id="playMenu"
-        class="wrapped"
-        hidden="false"
-        style="position: relative; left: 50px; top: 30px"
-        ;
-      >
-        <div class="game-details">
-          <p>CHOOSE DIFFICULTY</p>
-        </div>
-        <button
-          style="position: absolute; left: 290px; top: 150px"
-          onclick="easyButton()"
-        >
-          Easy
-        </button>
-        <button
-          style="position: absolute; left: 290px; top: 200px"
-          onclick="mediumButton()"
-        >
-          Medium
-        </button>
-        <button
-          style="position: absolute; left: 290px; top: 250px"
-          onclick="hardButton()"
-        >
-          Hard
-        </button>
-        <button
-          style="position: absolute; left: 546px; top: 0px"
-          onclick="hideOrShowPlay()"
-        >
-          X
-        </button>
+      <div id="theDiffMenu" class="difficultyMenu" style="display: none">
+        <p>CHOOSE DIFFICULTY</p>
+        <button onclick="easyButton()">Easy</button>
+        <button onclick="mediumButton()">Medium</button>
+        <button onclick="hardButton()">Hard</button>
+        <button class="exitButton" onclick="hideOrShowPlay()">X</button>
       </div>
 
-      <div
-        id="optionsMenu"
-        class="wrapped"
-        hidden="false"
-        style="position: relative; left: 50px; top: 30px"
-        ;
-      >
+      <div id="theOptionsMenu" class="optionsMenu" style="display: none" ;>
         <div class="game-details">
           <p>OPTIONS</p>
         </div>
-        <button
-          style="position: absolute; left: 546px; top: 0px"
-          onclick="hideOrShowOptions()"
-        >
-          X
-        </button>
+        <button class="exitButton" onclick="hideOrShowOptions()">X</button>
       </div>
 
-      <div
-        id="howToPlayMenu"
-        class="wrapped"
-        hidden="false"
-        style="position: relative; left: 50px; top: 30px"
-        ;
-      >
+      <div id="theHowToPlayMenu" class="howToPlayMenu" style="display: none" ;>
         <div class="game-details">
           <p>HOW TO PLAY</p>
         </div>
-        <button
-          style="position: absolute; left: 546px; top: 0px"
-          onclick="hideOrShowHowToPlay()"
-        >
-          X
-        </button>
+        <button class="exitButton" onclick="hideOrShowHowToPlay()">X</button>
       </div>
     </div>
   </body>
 
   <script>
     function hideOrShowPlay() {
-      var playMenu = document.getElementById("playMenu");
+      var playMenu = document.getElementById("theDiffMenu");
+      var mainMenu = document.getElementById("mainScreen");
       if (playMenu.style.display === "none") {
         playMenu.style.display = "block";
+        mainMenu.style.display = "none";
       } else {
         playMenu.style.display = "none";
+        mainMenu.style.display = "block";
       }
     }
   </script>
 
   <script>
     function hideOrShowOptions() {
-      var optionsMenu = document.getElementById("optionsMenu");
-
+      var optionsMenu = document.getElementById("theOptionsMenu");
+      var mainMenu = document.getElementById("mainScreen");
       if (optionsMenu.style.display === "none") {
         optionsMenu.style.display = "block";
+        mainMenu.style.display = "none";
       } else {
         optionsMenu.style.display = "none";
+        mainMenu.style.display = "block";
       }
     }
   </script>
 
   <script>
     function hideOrShowHowToPlay() {
-      var howToPlayMenu = document.getElementById("howToPlayMenu");
-
+      var howToPlayMenu = document.getElementById("theHowToPlayMenu");
+      var mainMenu = document.getElementById("mainScreen");
       if (howToPlayMenu.style.display === "none") {
         howToPlayMenu.style.display = "block";
+        mainMenu.style.display = "none";
       } else {
         howToPlayMenu.style.display = "none";
+        mainMenu.style.display = "block";
       }
     }
   </script>
